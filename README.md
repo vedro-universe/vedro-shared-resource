@@ -1,0 +1,1 @@
+# vedro-shared-resource
