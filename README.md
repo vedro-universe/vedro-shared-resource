@@ -1,5 +1,9 @@
 # Shared Resource Decorator
 
+[![PyPI](https://img.shields.io/pypi/v/vedro-shared-resource.svg?style=flat-square)](https://pypi.python.org/pypi/vedro-shared-resource/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/vedro-shared-resource?style=flat-square)](https://pypi.python.org/pypi/vedro-shared-resource/)
+[![Python Version](https://img.shields.io/pypi/pyversions/vedro-shared-resource.svg?style=flat-square)](https://pypi.python.org/pypi/vedro-shared-resource/)
+
 This package provides a simple decorator, `@shared_resource()`, which allows creation and sharing of resource instances between tests. Instead of repeatedly creating and then closing (or finalizing) the same resource in every test, a resource can be created once, shared across tests, and automatically finalized after all tests have finished.
 
 ## Installation
