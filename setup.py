@@ -13,7 +13,7 @@ def find_dev_required():
 
 setup(
     name="vedro-shared-resource",
-    version="0.0.1",
+    version="0.1.0",
     description="A decorator for sharing resources between tests",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
