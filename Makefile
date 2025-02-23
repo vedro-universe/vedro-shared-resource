@@ -34,8 +34,12 @@ check-style:
 .PHONY: lint
 lint: check-types check-style check-imports
 
+.PHONY: test
+test:
+	python3 -m vedro run
+
 .PHONY: all
-all: install lint
+all: install lint test
 
 .PHONY: bump
 bump:

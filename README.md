@@ -92,7 +92,7 @@ If the function accepts arguments, they become part of the cache key, ensuring t
 - For **synchronous functions**, the decorator leverages Python's built-in `functools.lru_cache`.
 - For **asynchronous functions**, it utilizes `async_lru.alru_cache`.
 
-## Use Cases
+## Use Cases Examples
 
 ### Use Case 1: Sharing an Asynchronous Resource (HTTP Client)
 
