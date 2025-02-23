@@ -11,7 +11,7 @@ else:
 from async_lru import alru_cache
 
 __all__ = ("shared_resource",)
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 P = ParamSpec("P")
 R = TypeVar("R")
