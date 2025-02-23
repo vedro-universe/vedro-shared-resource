@@ -1,6 +1,12 @@
+import sys
 from asyncio import iscoroutinefunction
 from functools import lru_cache
-from typing import Callable, ParamSpec, TypeVar, cast
+from typing import Callable, TypeVar, cast
+
+if sys.version_info >= (3, 10):
+    from typing import ParamSpec
+else:
+    from typing_extensions import ParamSpec
 
 from async_lru import alru_cache
 
@@ -19,8 +25,8 @@ def shared_resource(*,
     A decorator for caching function call results (memoization).
 
     This decorator supports both synchronous and asynchronous functions. For synchronous functions,
-    it uses ``functools.lru_cache`` to cache results, and for asynchronous functions, it uses
-    ``async_lru.alru_cache`` to provide equivalent caching behavior.
+    it uses `functools.lru_cache` to cache results, and for asynchronous functions, it uses
+    `async_lru.alru_cache` to provide equivalent caching behavior.
 
     It is useful for sharing expensive-to-compute or frequently accessed resources across multiple
     calls, reducing redundant computations and improving performance.
