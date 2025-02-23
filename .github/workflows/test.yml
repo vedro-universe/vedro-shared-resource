@@ -33,3 +33,11 @@ jobs:
       run: make lint
     - name: Test
       run: make test
+    - name: Test
+      run: make coverage
+    - name: Upload coverage
+      uses: codecov/codecov-action@v4
+      with:
+        fail_ci_if_error: false
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage.xml

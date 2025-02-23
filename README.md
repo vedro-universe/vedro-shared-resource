@@ -1,5 +1,6 @@
 # Shared Resource Decorator
 
+[![Codecov](https://img.shields.io/codecov/c/github/vedro-universe/vedro-shared-resource/main.svg?style=flat-square)](https://codecov.io/gh/vedro-universe/vedro-shared-resource)
 [![PyPI](https://img.shields.io/pypi/v/vedro-shared-resource.svg?style=flat-square)](https://pypi.python.org/pypi/vedro-shared-resource/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/vedro-shared-resource?style=flat-square)](https://pypi.python.org/pypi/vedro-shared-resource/)
 [![Python Version](https://img.shields.io/pypi/pyversions/vedro-shared-resource.svg?style=flat-square)](https://pypi.python.org/pypi/vedro-shared-resource/)

@@ -38,6 +38,12 @@ lint: check-types check-style check-imports
 test:
 	python3 -m vedro run
 
+.PHONY: coverage
+coverage:
+	coverage run -m vedro run
+	coverage xml -o coverage.xml
+	coverage report
+
 .PHONY: all
 all: install lint test
 
