@@ -19,7 +19,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Nikita Tsvetkov",
     author_email="tsv1@fastmail.com",
-    python_requires=">=3.10",
+    python_requires=">=3.8",
     url="https://github.com/vedro-universe/vedro-shared-resource",
     project_urls={
         "Docs": "https://github.com/vedro-universe/vedro-shared-resource",
