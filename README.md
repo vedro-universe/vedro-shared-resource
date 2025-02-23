@@ -30,7 +30,7 @@ defer(resource.close)
 # do something with resource
 ```
 
-(Note: Here, the `defer` function registers a callback to be executed after the current test scenario finishes)
+*(Note: Here, the `defer` function registers a callback to be executed after the current test scenario finishes)*
 
 Repeatedly creating the resource can lead to longer test execution times and increased resource consumption. By defining a shared resource that is created only once and cached using `@shared_resource()`, tests can run faster while ensuring that:
 - **Performance Improvement:** Expensive resource initialization is executed only once per unique set of arguments.
@@ -54,7 +54,7 @@ def create_shared_resource():
     return resource
 ```
 
-(Note: While `defer` registers a callback for the current test scenario, `defer_global` registers a callback for the entire test suite)
+*(Note: While `defer` registers a callback for the current test scenario, `defer_global` registers a callback for the entire test suite)*
 
 ### 2. Using the Shared Resource in Tests
 
@@ -120,6 +120,8 @@ client = await async_client()
 response = await client.get("https://example.com")
 ```
 
+*(This is just an example. For better integration with httpx, consider using the [vedro-httpx](https://pypi.org/project/vedro-httpx/) plugin)*
+
 ### Use Case 2: Sharing a Synchronous Resource (Web Browser)
 
 Sharing a Chromium browser instance while accepting parameters allows different configurations to be cached separately. The resource creation function uses keyword arguments as part of the cache key, meaning that launching the Chromium browser with specified parameters (e.g., `headless=False`) is performed only once per configuration. Because launching a browser repeatedly can significantly slow down tests, caching the launched browser instance improves performance and ensures consistency across tests.
@@ -147,6 +149,8 @@ browser = chromium(headless=False)
 page = browser.new_page()
 page.goto("https://example.com")
 ```
+
+*(This is just an example. For better integration with Playwright, consider using the [vedro-pw](https://pypi.org/project/vedro-pw/) plugin)*
 
 ## Caveats and Considerations
 
